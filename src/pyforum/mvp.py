@@ -32,7 +32,9 @@ def main():
             # Voici un exemple trivial de création d'un utilisateur. Vous devez le bonifier,
             # car il ne prend en compte que le nom d'utilisateur.
             username = input("Entrez le nom d'utilisateur: ")
-            utilisateur = {'username': username}
+            email = input("Entrez l'email: ")
+            password = input("Entrez le mot de passe: ")
+            utilisateur = {'username': username, 'email': email, 'password': password}
             # TODO: Ajouter ici la logique pour demander des informations à l'utilisateur
 
             # Le **utilisateur est une syntaxe Python pour déballer un dictionnaire.

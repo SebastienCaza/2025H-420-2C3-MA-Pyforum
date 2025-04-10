@@ -10,7 +10,7 @@ class BD:
         self.utilisateurs_forums = {}
         print("Base de données initialisée.")
     
-    def creer_utilisateur(self, username: str) -> Utilisateur:
+    def creer_utilisateur(self, username, email, password):
         #                       ^^^^^^^^^^^^^^
         #            # TODO:    Vous devez ajouter les autres paramètres requis
 
@@ -23,7 +23,7 @@ class BD:
         new_id = max([u.id for u in self.utilisateurs], default=0) + 1
 
         # Instancier un nouvel utilisateur et l'ajouter à la liste
-        u = Utilisateur(new_id, username)
+        u = Utilisateur(new_id, username, email, password )
         self.utilisateurs.append(u)
         print(f"[Simulé] Sauvegarde de l'utilisateur: {u}")
 
