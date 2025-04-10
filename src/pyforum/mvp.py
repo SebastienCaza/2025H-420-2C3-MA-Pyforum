@@ -54,7 +54,11 @@ def main():
             # Créer une publication
             print("\nCréation d'une publication...")
             # TODO: Ajouter ici la logique pour demander des informations à l'utilisateur
+            titre = input("Entrez le titre de la publication: ")
+            contenu = input("Entrez le contenu de la publication: ")
+            publication = {'titre': titre, 'contenu': contenu}
             # TODO: Ajouter l'appel à la base de donnée pour créer la publication
+            db.creer_publication(**publication)
 
         elif choix == '4':
             # Ajouter un commentaire
